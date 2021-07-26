@@ -1,0 +1,28 @@
+.navbar-logo {
+  width: 12.5rem;
+}
+
+.nav-link {
+  font-weight: 1000;
+  letter-spacing: 0.0375rem;
+  cursor: pointer;
+  text-transform: uppercase;
+  border-top: 0.1875rem solid var(--primary-black);
+}
+
+.navbar-nav > li > a {
+  margin-right: 0.75rem;
+  margin-left: 0.75rem;
+}
+
+.navbar-brand {
+  max-width: 17.25rem;
+  padding: 0.7rem !important;
+  height: 4rem !important;
+}
+
+@media screen and (min-width: 992px) {
+  .navbar-nav > li > a.active {
+    border-top: 0.1875rem solid var(--primary-white);
+  }
+}
