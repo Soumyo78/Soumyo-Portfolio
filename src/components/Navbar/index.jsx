@@ -1,8 +1,7 @@
-import { BackgroundColor } from "chalk";
 import React from "react";
 import navLogo from "../../resources/nav-logo.png";
-import "./style.css";
-import NavbarItem from "./NavbarItem";
+import "./style.scss";
+import NavbarItem from "./NavbarItem/index.jsx";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 
@@ -13,7 +12,7 @@ const Navbar = () => {
       style={{ backgroundColor: "#FF4500" }}
     >
       <div className="container-fluid">
-        <a className="navbar-brand" href="#">
+        <a className="navbar-brand" href="#home">
           <img className="navbar-logo" src={navLogo} alt="navbar logo" />
         </a>
         <button
