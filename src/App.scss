@@ -7,4 +7,22 @@
 
 .app-main-container {
   font-family: "Roboto Condensed", sans-serif;
+  height: 100vh;
+
+  .sections-main-container{
+    width: 100%;
+    height: calc(100vh - 80px);
+    background-color: lightyellow;
+    position: relative;
+    top: 80px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    scroll-snap-type: y mandatory;
+
+    > *{
+      width: 100vw;
+      height: calc(100vh - 80px);
+      scroll-snap-align: start;
+    }
+  }
 }
