@@ -2,7 +2,7 @@ import "./style.scss";
 
 const Work = () => {
   return(
-    <div className="work-main-container">
+    <div className="work-main-container" id="work">
       This is work page
     </div>
   );
