@@ -1,8 +1,6 @@
-import { BackgroundColor } from "chalk";
-import React from "react";
-import navLogo from "../../resources/nav-logo.png";
-import "./style.css";
-import NavbarItem from "./NavbarItem";
+import navLogo from "../../resources/nav-logo-3.png";
+import "./style.scss";
+import NavbarItem from "./NavbarItem/index.jsx";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 
@@ -13,7 +11,7 @@ const Navbar = () => {
       style={{ backgroundColor: "#FF4500" }}
     >
       <div className="container-fluid">
-        <a className="navbar-brand" href="#">
+        <a className="navbar-brand" href="#home">
           <img className="navbar-logo" src={navLogo} alt="navbar logo" />
         </a>
         <button
@@ -38,21 +36,21 @@ const Navbar = () => {
             />
             <NavbarItem
               active={"nav-link"}
-              id={"nav-about"}
-              href={"#about"}
-              navItem={"About"}
-            />
-            <NavbarItem
-              active={"nav-link"}
-              id={"nav-service"}
-              href={"#service"}
-              navItem={"Service"}
-            />
-            <NavbarItem
-              active={"nav-link"}
               id={"nav-portfolio"}
               href={"#portfolio"}
               navItem={"Portfolio"}
+            />
+            <NavbarItem
+              active={"nav-link"}
+              id={"nav-work"}
+              href={"#work"}
+              navItem={"Works"}
+            />
+            <NavbarItem
+              active={"nav-link"}
+              id={"nav-testimonials"}
+              href={"#testimonials"}
+              navItem={"Testimonials"}
             />
             <NavbarItem
               active={"nav-link"}

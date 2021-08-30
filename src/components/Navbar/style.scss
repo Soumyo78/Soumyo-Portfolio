@@ -1,3 +1,13 @@
+@import "../../global.scss";
+
+.navbar {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  background-color: $navbarBgColor !important;
+}
+
 .navbar-logo {
   width: 12.5rem;
 }
@@ -7,7 +17,7 @@
   letter-spacing: 0.0375rem;
   cursor: pointer;
   text-transform: uppercase;
-  border-top: 0.1875rem solid var(--primary-black);
+  border-top: 0.1875rem solid $primaryBlack;
 }
 
 .navbar-nav > li > a {
@@ -23,6 +33,6 @@
 
 @media screen and (min-width: 992px) {
   .navbar-nav > li > a.active {
-    border-top: 0.1875rem solid var(--primary-white);
+    border-top: 0.1875rem solid $primaryWhite;
   }
 }
