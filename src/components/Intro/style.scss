@@ -1,5 +1,143 @@
 @import "../../global.scss";
+@import url("https://fonts.googleapis.com/css2?family=Arimo&family=Josefin+Sans&family=Libre+Franklin&display=swap");
 
-.intro-main-container{
+.intro-main-container {
   background-color: $primaryWhite;
+  display: flex;
+  height: 100vh;
+
+  .left {
+    flex: 0.5;
+    overflow: hidden;
+    display: flex;
+
+    .image-container {
+      display: flex;
+      padding-left: 30px;
+      padding-right: 30px;
+      justify-content: center;
+      align-items: flex-start;
+      margin-left: 10px;
+
+      #home-screen-pic-1 {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
+  .right {
+    flex: 0.5;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    .wrapper {
+      padding-left: 50px;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      height: 100%;
+      justify-content: center;
+      text-align: start;
+      margin-left: 80px;
+
+      #home-h1-text {
+        font-family: "Josefin Sans", sans-serif;
+        font-size: 4vw;
+      }
+      #home-h2-text {
+        font-family: "Arimo", sans-serif;
+        font-size: 3vw;
+      }
+      #home-h3-text {
+        font-family: "Libre Franklin", sans-serif;
+        font-size: 2vw;
+
+        #home-span-developer-text {
+          color: $primaryWhite;
+          border-radius: 5px 5px 5px 5px;
+          padding: 5px;
+          font-weight: bolder;
+          transition-timing-function: ease;
+          background: linear-gradient(
+            321deg,
+            $rainbowColorRed,
+            $rainbowColorOrange,
+            $rainbowColorYellow,
+            $rainbowColorGreen,
+            $rainbowColorBlue,
+            $rainbowColorIndigo,
+            $rainbowColorViolet
+          );
+          background-size: 1200% 1200%;
+
+          -webkit-animation: gradient-color-changer 31s ease infinite;
+          -moz-animation: gradient-color-changer 31s ease infinite;
+          -o-animation: gradient-color-changer 31s ease infinite;
+          animation: gradient-color-changer 31s ease infinite;
+        }
+      }
+    }
+
+    .home-section-down-arrow-container {
+      background-color: $primaryUIColor;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      padding: 10px;
+      position: absolute;
+      bottom: 20px;
+
+      #home-section-down-arrow {
+        animation: down-arrow-animation 2s;
+        animation-iteration-count: infinite;
+      }
+
+      #home-section-down-arrow:hover {
+        animation: none;
+      }
+    }
+  }
+}
+
+
+// Media queries
+
+@media screen and (max-width: 992px) {
+  .intro-main-container {
+    flex-direction: column;
+
+    .left {
+      justify-content: center;
+      padding-top: 50px;
+
+      .image-container {
+        margin: 0;
+      }
+    }
+
+    .right {
+      align-items: center;
+
+      .wrapper {
+        margin: 30px;
+        justify-content: flex-start;
+
+        #home-h1-text {
+          font-size: 10vw;
+        }
+        #home-h2-text {
+          font-size: 6vw;
+        }
+        #home-h3-text {
+          font-size: 4vw;
+        }
+      }
+
+      .home-section-down-arrow-container{
+        bottom: 60px;
+      }
+    }
+  }
 }

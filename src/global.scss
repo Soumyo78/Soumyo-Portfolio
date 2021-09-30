@@ -3,4 +3,72 @@
 // Global Colors
 $primaryWhite: #fff;
 $primaryBlack: rgb(255, 255, 255, 0);
-$navbarBgColor: yellowgreen;
+$primaryUIColor: rgb(108, 99, 255);
+$primaryRed: rgb(177, 39, 39);
+
+// Rainbow Colors
+$rainbowColorRed: hsl(1deg, 100%, 55%);
+$rainbowColorOrange: hsl(25deg, 100%, 50%);
+$rainbowColorYellow: hsl(40deg, 100%, 50%);
+$rainbowColorGreen: hsl(130deg, 100%, 40%);
+$rainbowColorBlue: hsl(230deg, 100%, 45%);
+$rainbowColorIndigo: hsl(240deg, 100%, 45%);
+$rainbowColorViolet: hsl(260deg, 100%, 55%);
+
+// Animations
+
+// Down arrow animation
+@keyframes down-arrow-animation {
+  from {
+    transform: translate(0, -10px);
+  }
+  to {
+    transform: translate(0, 10px);
+  }
+}
+
+// Rainbow effect color changing animation
+@-webkit-keyframes gradient-color-changer {
+  0% {
+    background-position: 0% 77%;
+  }
+  50% {
+    background-position: 100% 24%;
+  }
+  100% {
+    background-position: 0% 77%;
+  }
+}
+@-moz-keyframes gradient-color-changer {
+  0% {
+    background-position: 0% 77%;
+  }
+  50% {
+    background-position: 100% 24%;
+  }
+  100% {
+    background-position: 0% 77%;
+  }
+}
+@-o-keyframes gradient-color-changer {
+  0% {
+    background-position: 0% 77%;
+  }
+  50% {
+    background-position: 100% 24%;
+  }
+  100% {
+    background-position: 0% 77%;
+  }
+}
+@keyframes gradient-color-changer {
+  0% {
+    background-position: 0% 77%;
+  }
+  50% {
+    background-position: 100% 24%;
+  }
+  100% {
+    background-position: 0% 77%;
+  }
+}
