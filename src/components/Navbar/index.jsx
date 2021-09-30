@@ -1,4 +1,4 @@
-import navLogo from "../../resources/nav-logo-3.png";
+import navLogo from "../../resources/nav-logo-7.png";
 import "./style.scss";
 import NavbarItem from "./NavbarItem/index.jsx";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
