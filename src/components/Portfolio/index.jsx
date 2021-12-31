@@ -7,6 +7,7 @@ import {
   fullStackAppPortfolioData,
   reactAppPortfolioData,
   mobileAppPortfolioData,
+  onlineGamesPortfolioData,
 } from "./portfolio-data";
 
 const Portfolio = () => {
@@ -29,6 +30,9 @@ const Portfolio = () => {
       case "mobile_apps":
         setPortfolioProjectData(mobileAppPortfolioData);
         break;
+      case "online_game":
+        setPortfolioProjectData(onlineGamesPortfolioData);
+        break;
       default:
         setPortfolioProjectData(featuredAppPortfolioData);
         break;
@@ -44,6 +48,7 @@ const Portfolio = () => {
           { heading: "Full Stack Apps", id: "full_stack_apps" },
           { heading: "React Apps", id: "react_apps" },
           { heading: "Mobile Apps", id: "mobile_apps" },
+          { heading: "Online Games", id: "online_game" },
         ]}
         selectedState={selected}
         selectStateFunction={setSelected}

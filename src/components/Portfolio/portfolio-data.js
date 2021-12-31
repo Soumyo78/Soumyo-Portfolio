@@ -110,9 +110,21 @@ const reactAppPortfolioData = [
       className="react-app-pic"
     />,
     <img src={TextEditorPic} alt="text-editor-pic" className="react-app-pic" />,
-    <img src={OnlineDrawingPic} alt="online-drawing-pic" className="react-app-pic" />,
-    <img src={LiveWeatherPic} alt="live-weather-pic" className="react-app-pic" />,
-    <img src={VideoConverterPic} alt="video-converter-pic" className="react-app-pic" />,
+    <img
+      src={OnlineDrawingPic}
+      alt="online-drawing-pic"
+      className="react-app-pic"
+    />,
+    <img
+      src={LiveWeatherPic}
+      alt="live-weather-pic"
+      className="react-app-pic"
+    />,
+    <img
+      src={VideoConverterPic}
+      alt="video-converter-pic"
+      className="react-app-pic"
+    />,
   ],
   [
     "Chobi - A Simple Photo Editor",
@@ -138,8 +150,27 @@ const mobileAppPortfolioData = [
     "Chat Application Mobile Client",
     "Music Player for Mobile",
     "Weather Application for Mobile",
-    "Tetris Game",
-    "Snake Game",
+    "Mobile Tetris",
+    "Snake Game for Mobile",
+  ],
+];
+
+const onlineGamesPortfolioData = [
+  [
+    <MobileAppPic1 className="mobile-app-pic" />,
+    <MobileAppPic1 className="mobile-app-pic" />,
+    <MobileAppPic1 className="mobile-app-pic" />,
+    <MobileAppPic1 className="mobile-app-pic" />,
+    <MobileAppPic1 className="mobile-app-pic" />,
+    <MobileAppPic1 className="mobile-app-pic" />,
+  ],
+  [
+    "Candy Crush Game online",
+    "Rock, Paper, Scissors Online",
+    "Sample Online Game",
+    "Sample Online Game",
+    "Tetris Online",
+    "Snake Game Online",
   ],
 ];
 
@@ -148,4 +179,5 @@ export {
   fullStackAppPortfolioData,
   reactAppPortfolioData,
   mobileAppPortfolioData,
+  onlineGamesPortfolioData,
 };
