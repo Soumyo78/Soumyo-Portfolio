@@ -1,9 +1,14 @@
 //This is for storing global variables
 
+//root properties
+:root {
+  --primary-ui-color: rgb(108, 99, 255);
+}
+
 // Global Colors
 $primaryWhite: #fff;
-$primaryBlack: rgb(255, 255, 255, 0);
-$primaryUIColor: rgb(108, 99, 255);
+$primaryTransparentWhite: rgb(255, 255, 255, 0);
+$primaryUIColor: var(--primary-ui-color);
 $primaryRed: rgb(177, 39, 39);
 
 // Rainbow Colors

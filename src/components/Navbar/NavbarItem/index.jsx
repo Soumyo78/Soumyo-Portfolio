@@ -1,16 +1,8 @@
-import ReactDOM from "react-dom";
-
 const NavbarItem = (props) => {
   const onMouseClick = (id) => {
     if (window.screen.width < 992) {
       document.querySelector(".navbar-toggler").click();
     }
-
-    ReactDOM.findDOMNode(document.querySelector(".active")).classList.remove(
-      "active"
-    );
-    let element = document.getElementById(id);
-    ReactDOM.findDOMNode(element).classList.add("active");
   };
 
   return (

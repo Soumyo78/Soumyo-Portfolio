@@ -1,0 +1,44 @@
+@import "../../../global.scss";
+
+.item-image-main-container {
+  width: 70vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  .item {
+    padding: 5px;
+    margin: 10px;
+    border-radius: 10px;
+    border: 1px solid lightgrey;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    transition: all 0.5s ease;
+    cursor: pointer;
+    text-align: center;
+
+    .featured-app-pic, .full-stack-app-pic, .react-app-pic, .mobile-app-pic {
+      width: 20vw;
+      height: 10vw;
+      object-fit: cover;
+      z-index: 1;
+    }
+
+    h3{
+      position: absolute;
+    }
+
+    &:hover{
+      background-color: $primaryWhite;
+
+      .featured-app-pic, .full-stack-app-pic, .react-app-pic, .mobile-app-pic{
+        opacity: 0.2;
+        z-index: 0;
+      }
+    }
+  }
+}

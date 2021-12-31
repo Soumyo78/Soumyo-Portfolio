@@ -1,3 +1,14 @@
-.portfolio-main-container{
-  background-color: lightseagreen;
+@import "../../global.scss";
+
+.portfolio-main-container {
+  background-color: $primaryWhite;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
+
+  h1 {
+    font-size: 4vw;
+    font-weight: bold;
+  }
 }
