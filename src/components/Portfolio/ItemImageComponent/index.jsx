@@ -1,16 +1,18 @@
 import "./style.scss";
 
 const ItemImageComponent = (props) => {
-  const { itemImageList, itemTitleList } = props;
+  const { itemList } = props;
 
   return (
     <div className="item-image-main-container">
-      {itemTitleList.map((item, index) => {
+      {itemList && itemList.map((item) => {
         return (
-          <div className="item">
-            {itemImageList[index]}
-            <h3>{item}</h3>
-          </div>
+          <a href={item.link} target="_blank" rel="noreferrer" key={item.key}>
+            <div className="item">
+              {item.image}
+              <h3>{item.title}</h3>
+            </div>
+          </a>
         );
       })}
     </div>

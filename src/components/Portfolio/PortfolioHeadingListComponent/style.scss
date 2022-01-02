@@ -2,7 +2,6 @@
 
 .portfolio-list {
   margin: 10px;
-  padding: 0;
   list-style: none;
   display: flex;
 
@@ -17,6 +16,31 @@
     &.active {
       background-color: $primaryUIColor;
       color: $primaryWhite;
+    }
+  }
+}
+
+// Media queries
+@media screen and (max-width: 970px) {
+}
+
+@media screen and (max-width: 650px) {
+  .portfolio-list {
+    width: 90vw;
+    justify-content: space-around;
+    background-color: $primaryUIColor;
+    border-radius: 14px 14px 14px 14px;
+
+    li {
+      margin: 10px;
+      font-size: 10px;
+
+      &.active {
+        background-color: cadetblue;
+        height: max-content;
+        width: 35px;
+        text-align: center;
+      }
     }
   }
 }

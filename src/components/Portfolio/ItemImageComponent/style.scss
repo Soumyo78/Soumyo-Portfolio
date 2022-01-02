@@ -7,37 +7,82 @@
   justify-content: center;
   flex-wrap: wrap;
 
-  .item {
-    padding: 5px;
-    margin: 10px;
-    border-radius: 10px;
-    border: 1px solid lightgrey;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    position: relative;
-    transition: all 0.5s ease;
-    cursor: pointer;
-    text-align: center;
+  a {
+    .item {
+      padding: 5px;
+      margin: 10px;
+      border-radius: 10px;
+      border: 1px solid lightgrey;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      position: relative;
+      transition: all 0.5s ease;
+      cursor: pointer;
+      text-align: center;
+      color: $primaryUIColor;
 
-    .featured-app-pic, .full-stack-app-pic, .react-app-pic, .mobile-app-pic {
-      width: 20vw;
-      height: 10vw;
-      object-fit: cover;
-      z-index: 1;
+      .featured-app-pic,
+      .full-stack-app-pic,
+      .react-app-pic,
+      .mobile-app-pic {
+        width: 20vw;
+        height: 10vw;
+        object-fit: cover;
+        z-index: 1;
+      }
+
+      h3 {
+        position: absolute;
+      }
+
+      &:hover {
+        background-color: $primaryWhite;
+
+        .featured-app-pic,
+        .full-stack-app-pic,
+        .react-app-pic,
+        .mobile-app-pic {
+          opacity: 0.2;
+          z-index: 0;
+        }
+      }
     }
+  }
+}
 
-    h3{
-      position: absolute;
+// Media queries
+@media screen and (max-width: 700px) {
+  .item-image-main-container {
+    overflow: scroll;
+    max-height: 80vh;
+    width: fit-content;
+
+    a {
+      .item {
+        h3 {
+          font-size: 10vw;
+        }
+
+        width: 23vw;
+        height: 15vh;
+
+        .item-img-pic {
+          width: inherit;
+          height: -webkit-fill-available;
+        }
+      }
     }
+  }
+}
 
-    &:hover{
-      background-color: $primaryWhite;
-
-      .featured-app-pic, .full-stack-app-pic, .react-app-pic, .mobile-app-pic{
-        opacity: 0.2;
-        z-index: 0;
+@media screen and (max-width: 500px) {
+  .item-image-main-container {
+    a {
+      .item {
+        width: 80vw;
+        height: 40vw;
       }
     }
   }

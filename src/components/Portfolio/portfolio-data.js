@@ -16,131 +16,300 @@ import LiveWeatherPic from "../../resources/weather-pic-1.jpg";
 import OnlineDrawingPic from "../../resources/online-drwaing-pic-1.jpg";
 
 const featuredAppPortfolioData = [
-  [
-    <img
-      src={ECommercePic}
-      alt="e-commerce-pic"
-      className="featured-app-pic"
-    />,
-    <img
-      src={MovieReviewPic}
-      alt="movie-review-pic"
-      className="featured-app-pic"
-    />,
-    <img
-      src={PhotoEditorPic}
-      alt="photo-editor-pic"
-      className="featured-app-pic"
-    />,
-    <img
-      src={MusicPlayerPic}
-      alt="music-player-pic"
-      className="featured-app-pic"
-    />,
-    <img
-      src={TextEditorPic}
-      alt="text-editor-pic"
-      className="featured-app-pic"
-    />,
-    <img
-      src={SocialMediaPic}
-      alt="social-media-pic"
-      className="featured-app-pic"
-    />,
-  ],
-  [
-    "E-commerce Application",
-    "Movie Review Application",
-    "Chobi - A Simple Photo Editor",
-    "Online Music Player",
-    "Online Text Editor",
-    "Social Media Application",
-  ],
+  {
+    title: "E-commerce Application",
+    key: "e-commerce-application",
+    link: "",
+    image: (
+      <img
+        src={ECommercePic}
+        aria-hidden alt="e-commerce-pic"
+        className="featured-app-pic item-img-pic"
+      />
+    ),
+  },
+  {
+    title: "Movie Review Application",
+    key: "movie-review-application",
+    link: "",
+    image: (
+      <img
+        src={MovieReviewPic}
+        aria-hidden alt="movie-review-pic"
+        className="featured-app-pic item-img-pic"
+      />
+    ),
+  },
+  {
+    title: "Chobi - A Simple Photo Editor",
+    key: "photo-editor-application",
+    link: "https://project-chobi.netlify.app/",
+    image: (
+      <img
+        src={PhotoEditorPic}
+        aria-hidden alt="photo-editor-pic"
+        className="featured-app-pic item-img-pic"
+      />
+    ),
+  },
+  {
+    title: "Online Music Player",
+    key: "music-player-application",
+    link: "",
+    image: (
+      <img
+        src={MusicPlayerPic}
+        aria-hidden alt="music-player-pic"
+        className="featured-app-pic item-img-pic"
+      />
+    ),
+  },
+  {
+    title: "Online Text Editor",
+    key: "online-text-editor-application",
+    link: "",
+    image: (
+      <img
+        src={TextEditorPic}
+        aria-hidden alt="text-editor-pic"
+        className="featured-app-pic item-img-pic"
+      />
+    ),
+  },
+  {
+    title: "Social Media Application",
+    key: "social-media-application",
+    link: "",
+    image: (
+      <img
+        src={SocialMediaPic}
+        aria-hidden alt="social-media-pic"
+        className="featured-app-pic item-img-pic"
+      />
+    ),
+  },
 ];
 
 const fullStackAppPortfolioData = [
-  [
-    <img
-      src={SocialMediaPic}
-      alt="social-media-pic"
-      className="full-stack-app-pic"
-    />,
-    <ChatAppPic className="full-stack-app-pic" />,
-    <img
-      src={RestaurantWebsitePic}
-      alt="restaurant-website-pic"
-      className="full-stack-app-pic"
-    />,
-    <img
-      src={ECommercePic}
-      alt="e-commerce-pic"
-      className="full-stack-app-pic"
-    />,
-    <img
-      src={MovieReviewPic}
-      alt="movie-review-pic"
-      className="full-stack-app-pic"
-    />,
-    <img
-      src={HospitalManagementSystemPic}
-      alt="hospital-management-system-pic"
-      className="full-stack-app-pic"
-    />,
-  ],
-  [
-    "Social Media Application",
-    "Chat Application",
-    "Full Featured Restaurant Website",
-    "E-commerce Application",
-    "Movie Review Application",
-    "Hospital Management System",
-  ],
+  {
+    title: "Social Media Application",
+    key: "social-media-application",
+    link: "",
+    image: (
+      <img
+        src={SocialMediaPic}
+        aria-hidden alt="social-media-pic"
+        className="full-stack-app-pic item-img-pic"
+      />
+    ),
+  },
+  {
+    title: "Chat Application",
+    key: "chat-application",
+    link: "",
+    image: <ChatAppPic className="full-stack-app-pic item-img-pic" />,
+  },
+  {
+    title: "Full Featured Restaurant Website",
+    key: "restaurant-application",
+    link: "",
+    image: (
+      <img
+        src={RestaurantWebsitePic}
+        aria-hidden alt="restaurant-website-pic"
+        className="full-stack-app-pic item-img-pic"
+      />
+    ),
+  },
+  {
+    title: "E-commerce Application",
+    key: "e-commerce-application",
+    link: "",
+    image: (
+      <img
+        src={ECommercePic}
+        aria-hidden alt="e-commerce-pic"
+        className="full-stack-app-pic item-img-pic"
+      />
+    ),
+  },
+  {
+    title: "Movie Review Application",
+    key: "movie-review-application",
+    link: "",
+    image: (
+      <img
+        src={MovieReviewPic}
+        aria-hidden alt="movie-review-pic"
+        className="full-stack-app-pic item-img-pic"
+      />
+    ),
+  },
+  {
+    title: "Hospital Management System",
+    key: "hospital-management-application",
+    link: "",
+    image: (
+      <img
+        src={HospitalManagementSystemPic}
+        aria-hidden alt="hospital-management-system-pic"
+        className="full-stack-app-pic item-img-pic"
+      />
+    ),
+  },
 ];
 
 const reactAppPortfolioData = [
-  [
-    <img
-      src={PhotoEditorPic}
-      alt="photo-editor-pic"
-      className="react-app-pic"
-    />,
-    <img
-      src={MusicPlayerPic}
-      alt="music-player-pic"
-      className="react-app-pic"
-    />,
-    <img src={TextEditorPic} alt="text-editor-pic" className="react-app-pic" />,
-    <img src={OnlineDrawingPic} alt="online-drawing-pic" className="react-app-pic" />,
-    <img src={LiveWeatherPic} alt="live-weather-pic" className="react-app-pic" />,
-    <img src={VideoConverterPic} alt="video-converter-pic" className="react-app-pic" />,
-  ],
-  [
-    "Chobi - A Simple Photo Editor",
-    "Online Music Player",
-    "Online Text Editor",
-    "Online Drawing Application",
-    "Live Weather Application",
-    "A Video Converter",
-  ],
+  {
+    title: "Chobi - A Simple Photo Editor",
+    key: "photo-editor-application",
+    link: "https://project-chobi.netlify.app/",
+    image: (
+      <img
+        src={PhotoEditorPic}
+        aria-hidden alt="photo-editor-pic"
+        className="react-app-pic item-img-pic"
+      />
+    ),
+  },
+  {
+    title: "Online Music Player",
+    key: "online-music-player-application",
+    link: "",
+    image: (
+      <img
+        src={MusicPlayerPic}
+        aria-hidden alt="music-player-pic"
+        className="react-app-pic item-img-pic"
+      />
+    ),
+  },
+  {
+    title: "Online Text Editor",
+    key: "online-text-editor-application",
+    link: "",
+    image: (
+      <img
+        src={TextEditorPic}
+        aria-hidden alt="text-editor-pic"
+        className="react-app-pic item-img-pic"
+      />
+    ),
+  },
+  {
+    title: "Online Drawing Application",
+    key: "online-drawing-application",
+    link: "",
+    image: (
+      <img
+        src={OnlineDrawingPic}
+        aria-hidden alt="online-drawing-pic"
+        className="react-app-pic item-img-pic"
+      />
+    ),
+  },
+  {
+    title: "Live Weather Application",
+    key: "live-weather-application",
+    link: "",
+    image: (
+      <img
+        src={LiveWeatherPic}
+        aria-hidden alt="live-weather-pic"
+        className="react-app-pic item-img-pic"
+      />
+    ),
+  },
+  {
+    title: "A Video Converter",
+    key: "video-converter-application",
+    link: "",
+    image: (
+      <img
+        src={VideoConverterPic}
+        aria-hidden alt="video-converter-pic"
+        className="react-app-pic item-img-pic"
+      />
+    ),
+  },
 ];
 
 const mobileAppPortfolioData = [
-  [
-    <MobileAppPic1 className="mobile-app-pic" />,
-    <MobileAppPic1 className="mobile-app-pic" />,
-    <MobileAppPic1 className="mobile-app-pic" />,
-    <MobileAppPic1 className="mobile-app-pic" />,
-    <MobileAppPic1 className="mobile-app-pic" />,
-    <MobileAppPic1 className="mobile-app-pic" />,
-  ],
-  [
-    "Materialize Calculator",
-    "Chat Application Mobile Client",
-    "Music Player for Mobile",
-    "Weather Application for Mobile",
-    "Tetris Game",
-    "Snake Game",
-  ],
+  {
+    title: "Materialize Calculator",
+    key: "materialize-calculator-application",
+    link: "",
+    image: <MobileAppPic1 className="mobile-app-pic item-img-pic" />,
+  },
+  {
+    title: "Chat Application Mobile Client",
+    key: "chat-application-mobile-client",
+    link: "",
+    image: <MobileAppPic1 className="mobile-app-pic item-img-pic" />,
+  },
+  {
+    title: "Music Player for Mobile",
+    key: "music-player-for-mobile-application",
+    link: "",
+    image: <MobileAppPic1 className="mobile-app-pic item-img-pic" />,
+  },
+  {
+    title: "Weather Application for Mobile",
+    key: "weather-application-for-mobile",
+    link: "",
+    image: <MobileAppPic1 className="mobile-app-pic item-img-pic" />,
+  },
+  {
+    title: "Mobile Tetris",
+    key: "mobile-tetris",
+    link: "",
+    image: <MobileAppPic1 className="mobile-app-pic item-img-pic" />,
+  },
+  {
+    title: "Snake Game for Mobile",
+    key: "snake-game-for-mobile",
+    link: "",
+    image: <MobileAppPic1 className="mobile-app-pic item-img-pic" />,
+  },
+];
+
+const onlineGamesPortfolioData = [
+  {
+    title: "Candy Crush Game online",
+    key: "candy-crush-game-online",
+    link: "",
+    image: <MobileAppPic1 className="mobile-app-pic item-img-pic" />,
+  },
+  {
+    title: "Rock, Paper, Scissors Online",
+    key: "rock-paper-scissors-online",
+    link: "",
+    image: <MobileAppPic1 className="mobile-app-pic item-img-pic" />,
+  },
+  {
+    title: "Sample Online Game",
+    key: "sample-online-game-1",
+    link: "",
+    image: <MobileAppPic1 className="mobile-app-pic item-img-pic" />,
+  },
+  {
+    title: "Sample Online Game",
+    key: "sample-online-game-2",
+    link: "",
+    image: <MobileAppPic1 className="mobile-app-pic item-img-pic" />,
+  },
+  {
+    title: "Tetris Online",
+    key: "tetris-online",
+    link: "",
+    image: <MobileAppPic1 className="mobile-app-pic item-img-pic" />,
+  },
+  {
+    title: "Snake Game Online",
+    key: "snake-game-online",
+    link: "",
+    image: <MobileAppPic1 className="mobile-app-pic item-img-pic" />,
+  },
 ];
 
 export {
@@ -148,4 +317,5 @@ export {
   fullStackAppPortfolioData,
   reactAppPortfolioData,
   mobileAppPortfolioData,
+  onlineGamesPortfolioData,
 };
