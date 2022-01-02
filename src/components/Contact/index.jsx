@@ -2,7 +2,7 @@ import "./style.scss";
 
 const Contact = () => {
   return (
-    <div class="contact-main-container" id="contact">
+    <div className="contact-main-container" id="contact">
       This is contact page
     </div>
   );

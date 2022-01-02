@@ -23,7 +23,7 @@ const featuredAppPortfolioData = [
     image: (
       <img
         src={ECommercePic}
-        alt="e-commerce-pic"
+        aria-hidden alt="e-commerce-pic"
         className="featured-app-pic item-img-pic"
       />
     ),
@@ -35,7 +35,7 @@ const featuredAppPortfolioData = [
     image: (
       <img
         src={MovieReviewPic}
-        alt="movie-review-pic"
+        aria-hidden alt="movie-review-pic"
         className="featured-app-pic item-img-pic"
       />
     ),
@@ -47,7 +47,7 @@ const featuredAppPortfolioData = [
     image: (
       <img
         src={PhotoEditorPic}
-        alt="photo-editor-pic"
+        aria-hidden alt="photo-editor-pic"
         className="featured-app-pic item-img-pic"
       />
     ),
@@ -59,7 +59,7 @@ const featuredAppPortfolioData = [
     image: (
       <img
         src={MusicPlayerPic}
-        alt="music-player-pic"
+        aria-hidden alt="music-player-pic"
         className="featured-app-pic item-img-pic"
       />
     ),
@@ -71,7 +71,7 @@ const featuredAppPortfolioData = [
     image: (
       <img
         src={TextEditorPic}
-        alt="text-editor-pic"
+        aria-hidden alt="text-editor-pic"
         className="featured-app-pic item-img-pic"
       />
     ),
@@ -83,7 +83,7 @@ const featuredAppPortfolioData = [
     image: (
       <img
         src={SocialMediaPic}
-        alt="social-media-pic"
+        aria-hidden alt="social-media-pic"
         className="featured-app-pic item-img-pic"
       />
     ),
@@ -98,7 +98,7 @@ const fullStackAppPortfolioData = [
     image: (
       <img
         src={SocialMediaPic}
-        alt="social-media-pic"
+        aria-hidden alt="social-media-pic"
         className="full-stack-app-pic item-img-pic"
       />
     ),
@@ -116,7 +116,7 @@ const fullStackAppPortfolioData = [
     image: (
       <img
         src={RestaurantWebsitePic}
-        alt="restaurant-website-pic"
+        aria-hidden alt="restaurant-website-pic"
         className="full-stack-app-pic item-img-pic"
       />
     ),
@@ -128,7 +128,7 @@ const fullStackAppPortfolioData = [
     image: (
       <img
         src={ECommercePic}
-        alt="e-commerce-pic"
+        aria-hidden alt="e-commerce-pic"
         className="full-stack-app-pic item-img-pic"
       />
     ),
@@ -140,7 +140,7 @@ const fullStackAppPortfolioData = [
     image: (
       <img
         src={MovieReviewPic}
-        alt="movie-review-pic"
+        aria-hidden alt="movie-review-pic"
         className="full-stack-app-pic item-img-pic"
       />
     ),
@@ -152,7 +152,7 @@ const fullStackAppPortfolioData = [
     image: (
       <img
         src={HospitalManagementSystemPic}
-        alt="hospital-management-system-pic"
+        aria-hidden alt="hospital-management-system-pic"
         className="full-stack-app-pic item-img-pic"
       />
     ),
@@ -167,7 +167,7 @@ const reactAppPortfolioData = [
     image: (
       <img
         src={PhotoEditorPic}
-        alt="photo-editor-pic"
+        aria-hidden alt="photo-editor-pic"
         className="react-app-pic item-img-pic"
       />
     ),
@@ -179,7 +179,7 @@ const reactAppPortfolioData = [
     image: (
       <img
         src={MusicPlayerPic}
-        alt="music-player-pic"
+        aria-hidden alt="music-player-pic"
         className="react-app-pic item-img-pic"
       />
     ),
@@ -191,7 +191,7 @@ const reactAppPortfolioData = [
     image: (
       <img
         src={TextEditorPic}
-        alt="text-editor-pic"
+        aria-hidden alt="text-editor-pic"
         className="react-app-pic item-img-pic"
       />
     ),
@@ -203,7 +203,7 @@ const reactAppPortfolioData = [
     image: (
       <img
         src={OnlineDrawingPic}
-        alt="online-drawing-pic"
+        aria-hidden alt="online-drawing-pic"
         className="react-app-pic item-img-pic"
       />
     ),
@@ -215,7 +215,7 @@ const reactAppPortfolioData = [
     image: (
       <img
         src={LiveWeatherPic}
-        alt="live-weather-pic"
+        aria-hidden alt="live-weather-pic"
         className="react-app-pic item-img-pic"
       />
     ),
@@ -227,7 +227,7 @@ const reactAppPortfolioData = [
     image: (
       <img
         src={VideoConverterPic}
-        alt="video-converter-pic"
+        aria-hidden alt="video-converter-pic"
         className="react-app-pic item-img-pic"
       />
     ),

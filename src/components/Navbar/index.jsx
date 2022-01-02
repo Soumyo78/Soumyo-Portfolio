@@ -12,7 +12,7 @@ const Navbar = () => {
     >
       <div className="container-fluid">
         <a className="navbar-brand" href="#home">
-          <img className="navbar-logo" src={navLogo} alt="navbar logo" />
+          <img className="navbar-logo" src={navLogo} aria-hidden alt="navbar logo" />
         </a>
         <button
           className="navbar-toggler"
