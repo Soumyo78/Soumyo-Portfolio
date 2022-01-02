@@ -7,8 +7,28 @@
   align-items: center;
   padding: 30px;
 
-  h1 {
+  #home-h1-text{
     font-size: 4vw;
     font-weight: bold;
+  }
+}
+
+// Media queries
+@media screen and (max-width: 970px) {
+  .portfolio-main-container {
+    #home-h1-text{
+      font-size: 8vw;
+      font-weight: bold;
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .portfolio-main-container {
+    padding: 5px;
+
+    #home-h1-text{
+      font-weight: bold;
+    }
   }
 }

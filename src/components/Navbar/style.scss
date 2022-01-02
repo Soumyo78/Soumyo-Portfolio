@@ -31,6 +31,7 @@
   height: 4rem !important;
 }
 
+// Media queries
 @media screen and (min-width: 992px) {
   .navbar-nav > li > a.active {
     border-top: 0.1875rem solid $primaryWhite;
