@@ -1,3 +1,4 @@
+// Importing the styles
 import "./style.scss";
 
 const PortfolioHeadingListComponent = (props) => {
@@ -40,4 +41,5 @@ const PortfolioHeadingListComponent = (props) => {
   );
 };
 
+// Default exporting the components
 export default PortfolioHeadingListComponent;

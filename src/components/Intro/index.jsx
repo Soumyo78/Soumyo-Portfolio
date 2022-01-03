@@ -1,8 +1,13 @@
+// Importing the styles
 import "./style.scss";
-import { useEffect, useRef } from "react";
-import { ReactComponent as HomeScreenPic1 } from "../../resources/home-screen-pic-3.svg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
+
+// Importing react stuffs
+import { useEffect, useRef } from "react";
+import { ReactComponent as HomeScreenPic1 } from "../../resources/home-screen-pic-3.svg";
+
+// Importing libraries
 import { init } from "ityped";
 
 const Intro = () => {
@@ -48,4 +53,5 @@ const Intro = () => {
   );
 };
 
+// Default exporting the components
 export default Intro;

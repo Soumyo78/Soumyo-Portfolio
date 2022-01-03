@@ -1,3 +1,4 @@
+// Importing the styles
 import "./style.scss";
 
 const Contact = () => {
@@ -8,4 +9,5 @@ const Contact = () => {
   );
 }
 
+// Default exporting the components
 export default Contact;
