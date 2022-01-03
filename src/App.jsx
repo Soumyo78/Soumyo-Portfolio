@@ -2,15 +2,17 @@
 import "./App.scss";
 import "bootstrap/dist/css/bootstrap.min.css";
 
-// Importing JS files
+//Importing react stuffs
+import ReactDOM from "react-dom";
+import { useEffect } from "react";
+
+// Importing components
 import Navbar from "./components/Navbar";
 import Intro from "./components/Intro";
 import Portfolio from "./components/Portfolio";
 import Work from "./components/Work";
 import Testimonials from "./components/Testimonials";
 import Contact from "./components/Contact";
-import ReactDOM from "react-dom";
-import { useEffect } from "react";
 
 const App = () => {
   useEffect(() => {
@@ -55,6 +57,7 @@ const App = () => {
     };
   }, []);
 
+  // rendering components
   return (
     <main className="app-main-container">
       <Navbar />
@@ -69,4 +72,5 @@ const App = () => {
   );
 };
 
+// Default exporting the component
 export default App;

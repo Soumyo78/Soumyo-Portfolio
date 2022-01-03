@@ -1,3 +1,4 @@
+// Importing the styles
 import "./style.scss";
 
 const Work = () => {
@@ -8,4 +9,5 @@ const Work = () => {
   );
 }
 
+// Default exporting the components
 export default Work;

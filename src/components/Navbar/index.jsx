@@ -1,8 +1,13 @@
-import navLogo from "../../resources/nav-logo-7.png";
+// Importing the styles
 import "./style.scss";
-import NavbarItem from "./NavbarItem/index.jsx";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
+
+// Importing resources
+import navLogo from "../../resources/nav-logo-7.png";
+
+// Importing components
+import NavbarItem from "./NavbarItem/index.jsx";
 
 const Navbar = () => {
   return (
@@ -12,7 +17,12 @@ const Navbar = () => {
     >
       <div className="container-fluid">
         <a className="navbar-brand" href="#home">
-          <img className="navbar-logo" src={navLogo} aria-hidden alt="navbar logo" />
+          <img
+            className="navbar-logo"
+            src={navLogo}
+            aria-hidden
+            alt="navbar logo"
+          />
         </a>
         <button
           className="navbar-toggler"
@@ -71,4 +81,5 @@ const Navbar = () => {
   );
 };
 
+// Default exporting the components
 export default Navbar;
