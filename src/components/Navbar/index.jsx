@@ -52,15 +52,15 @@ const Navbar = () => {
             />
             <NavbarItem
               active={"nav-link"}
-              id={"nav-work"}
-              href={"#work"}
-              navItem={"Works"}
+              id={"nav-skill-and-knowledge"}
+              href={"#skill-and-knowledge"}
+              navItem={"Skill & Knowledge"}
             />
             <NavbarItem
               active={"nav-link"}
-              id={"nav-testimonials"}
-              href={"#testimonials"}
-              navItem={"Testimonials"}
+              id={"nav-education-and-experience"}
+              href={"#education-and-experience"}
+              navItem={"Education & Experience"}
             />
             <NavbarItem
               active={"nav-link"}
