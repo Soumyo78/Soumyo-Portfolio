@@ -1,5 +1,10 @@
 const NavbarItem = (props) => {
   const onMouseClick = (id) => {
+    if (id === "nav-blog") {
+      const blogComingModal = document.querySelector("#blog-coming-soon")
+      blogComingModal.style.display = "inherit";
+    }
+
     if (window.screen.width < 992) {
       document.querySelector(".navbar-toggler").click();
     }
