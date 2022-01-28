@@ -1,3 +1,61 @@
-.skill-and-knowledge-main-container{
-  background-color: lightslategrey;
+// Importing resources
+@import "../../global.scss";
+
+.skill-and-knowledge-main-container {
+  background-color: $primaryWhite;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
+
+  #skill-and-knowledge-h1-text {
+    font-size: 3vw;
+    font-weight: bold;
+    color: $primaryUIColor;
+  }
+
+  .content-cards-container {
+    display: flex;
+    flex-direction: row;
+    padding: 50px;
+    width: 100vw;
+    height: 100vh;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+    .skill-with-progress-bar-container {
+      width: 35vw;
+      margin-bottom: 10px;
+
+      .skill-title-text {
+        font-weight: bold;
+        font-size: 1.2vw;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+      }
+
+      .progress {
+        height: 10px;
+      }
+    }
+  }
+}
+
+// Media queries
+@media screen and (max-width: 970px) {
+  .skill-and-knowledge-main-container {
+    #skill-and-knowledge-h1-text {
+      font-size: 8vw;
+      font-weight: bold;
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .skill-and-knowledge-main-container {
+    padding: 5px;
+
+    #skill-and-knowledge-h1-text {
+      font-weight: bold;
+    }
+  }
 }

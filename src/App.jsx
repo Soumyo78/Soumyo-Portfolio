@@ -33,7 +33,7 @@ const App = () => {
         ReactDOM.findDOMNode(document.querySelector("#nav-home")).classList.add(
           "active"
         );
-        rootCss.style.setProperty("--primary-ui-color", "rgb(108, 99, 255)");
+        rootCss.style.setProperty("--primary-ui-color", "darkblue");
       }
 
       if (
@@ -46,7 +46,7 @@ const App = () => {
         ReactDOM.findDOMNode(
           document.querySelector("#nav-portfolio")
         ).classList.add("active");
-        rootCss.style.setProperty("--primary-ui-color", "rgb(0, 201, 166)");
+        rootCss.style.setProperty("--primary-ui-color", "darkgoldenrod");
       }
 
       if (
@@ -59,7 +59,7 @@ const App = () => {
         ReactDOM.findDOMNode(
           document.querySelector("#nav-skill-and-knowledge")
         ).classList.add("active");
-        rootCss.style.setProperty("--primary-ui-color", "rgb(108, 99, 255)");
+        rootCss.style.setProperty("--primary-ui-color", "darkslateblue");
       }
 
       if (
@@ -72,7 +72,7 @@ const App = () => {
         ReactDOM.findDOMNode(
           document.querySelector("#nav-education-and-experience")
         ).classList.add("active");
-        rootCss.style.setProperty("--primary-ui-color", "rgb(108, 99, 255)");
+        rootCss.style.setProperty("--primary-ui-color", "forestgreen");
       }
 
       if (
@@ -85,7 +85,7 @@ const App = () => {
         ReactDOM.findDOMNode(
           document.querySelector("#nav-contact")
         ).classList.add("active");
-        rootCss.style.setProperty("--primary-ui-color", "rgb(108, 99, 255)");
+        rootCss.style.setProperty("--primary-ui-color", "sandybrown");
       }
     };
   }, []);
