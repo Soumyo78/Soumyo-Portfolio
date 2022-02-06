@@ -9,7 +9,7 @@ const ContentCardComponent = (props) => {
       className="content-card-main-container overflow-auto"
       style={{
         width: mainContainerWidth ? mainContainerWidth : "fit-content",
-        height: mainContainerHeight ? mainContainerHeight : "38vh",
+        height: mainContainerHeight ? mainContainerHeight : "fit-content",
       }}
     >
       <h2
