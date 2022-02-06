@@ -56,7 +56,7 @@ const Portfolio = () => {
 
   return window.screen.width <= 650 ? (
     <div className="portfolio-main-container" id="portfolio">
-      <h1 id="home-h1-text">My Portfolio</h1>
+      <h1 id="portfolio-h1-text">My Portfolio</h1>
       <ItemImageComponent itemList={portfolioProjectData} />
       <PortfolioHeadingListComponent
         itemHeadingList={[
@@ -130,7 +130,7 @@ const Portfolio = () => {
     </div>
   ) : (
     <div className="portfolio-main-container" id="portfolio">
-      <h1 id="home-h1-text">Portfolio</h1>
+      <h1 id="portfolio-h1-text">My Portfolio</h1>
       <PortfolioHeadingListComponent
         itemHeadingList={[
           {
