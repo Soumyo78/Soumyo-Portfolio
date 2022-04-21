@@ -37,7 +37,7 @@ const responsive = {
   },
   mobile: {
     breakpoint: { max: 464, min: 0 },
-    items: 4,
+    items: 2,
   },
 };
 
@@ -191,6 +191,7 @@ const SkillAndKnowledge = () => {
         />
 
         <ContentCardComponent
+          containerClassName="knowledge-content-card-container"
           titleText={"My Knowledge"}
           cardContent={
             <div className="knowledge-carousel-main-container">

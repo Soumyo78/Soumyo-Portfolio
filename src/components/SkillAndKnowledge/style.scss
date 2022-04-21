@@ -68,6 +68,42 @@
 
     #skill-and-knowledge-h1-text {
       font-weight: bold;
+      margin-bottom: 15px;
+    }
+
+    .content-cards-container {
+      padding-top: 15px;
+      padding-bottom: 10px;
+      padding-left: 15px;
+      padding-right: 15px;
+
+      .content-card-main-container {
+        width: 100% !important;
+        height: fit-content !important;
+        max-height: 240px;
+
+        .card-title-text {
+          font-size: 5vw;
+        }
+
+        .skill-with-progress-bar-container {
+          width: 100%;
+
+          .skill-title-text {
+            font-size: 3vw;
+          }
+        }
+      }
+
+      .knowledge-content-card-container {
+        .card-content-container {
+          height: 5vh;
+
+          .knowledge-carousel-main-container{
+            height: auto;
+          }
+        }
+      }
     }
   }
 }

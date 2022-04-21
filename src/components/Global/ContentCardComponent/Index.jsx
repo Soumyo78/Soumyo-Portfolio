@@ -1,12 +1,17 @@
 import "./style.scss";
 
 const ContentCardComponent = (props) => {
-  const { titleText, cardContent, mainContainerWidth, mainContainerHeight } =
-    props;
+  const {
+    titleText,
+    cardContent,
+    mainContainerWidth,
+    mainContainerHeight,
+    containerClassName,
+  } = props;
 
   return (
     <div
-      className="content-card-main-container overflow-auto"
+      className={`content-card-main-container overflow-auto ${containerClassName}`}
       style={{
         width: mainContainerWidth ? mainContainerWidth : "fit-content",
         height: mainContainerHeight ? mainContainerHeight : "fit-content",
