@@ -46,7 +46,7 @@ const App = () => {
         ReactDOM.findDOMNode(
           document.querySelector("#nav-portfolio")
         ).classList.add("active");
-        rootCss.style.setProperty("--primary-ui-color", "darkgoldenrod");
+        rootCss.style.setProperty("--primary-ui-color", "black");
       }
 
       if (
@@ -85,7 +85,7 @@ const App = () => {
         ReactDOM.findDOMNode(
           document.querySelector("#nav-contact")
         ).classList.add("active");
-        rootCss.style.setProperty("--primary-ui-color", "sandybrown");
+        rootCss.style.setProperty("--primary-ui-color", "dodgerblue");
       }
     };
   }, []);
