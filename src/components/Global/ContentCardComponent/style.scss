@@ -14,11 +14,13 @@
   justify-content: flex-start;
   flex-direction: column;
   margin-bottom: 30px;
+  margin-left: 10px;
+  margin-right: 10px;
 
   .card-title-text {
     font-size: 1.8vw;
     font-weight: bold;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: "Courier New", Courier, monospace;
   }
 }
 
