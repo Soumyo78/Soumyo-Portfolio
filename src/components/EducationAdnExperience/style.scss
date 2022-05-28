@@ -1,3 +1,28 @@
-.education-and-experience-main-main-container{
-  background-color: lightsalmon;
+@import "../../global.scss";
+
+.education-and-experience-main-container {
+  display: flex;
+  background-color: $primaryWhite;
+  justify-content: space-around;
+  padding-right: 15px;
+  padding-left: 15px;
+  padding-bottom: 15px;
+  padding-top: 30px;
+  width: 100%;
+  height: 100vh;
+  align-items: center;
+
+  .content-card-main-container {
+    width: 100% !important;
+  }
+}
+
+@media screen and (max-width: 599px) {
+  .education-and-experience-main-container {
+    flex-wrap: wrap;
+
+    .content-card-main-container {
+      height: fit-content !important;
+    }
+  }
 }

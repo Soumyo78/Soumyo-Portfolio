@@ -18,7 +18,7 @@ const ContentCardComponent = (props) => {
       }}
     >
       <h2
-        id={`${titleText.replace(/\s+/g, "-").toLowerCase()}-text`}
+        id={`${titleText?.replace(/\s+/g, "-")?.toLowerCase()}-text`}
         className="card-title-text"
       >
         {titleText}
