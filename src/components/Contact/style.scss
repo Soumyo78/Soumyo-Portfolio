@@ -1,3 +1,57 @@
-.contact-main-container{
-  background-color: lightblue;
+// Importing resources
+@import "../../global.scss";
+
+.contact-main-container {
+  background-color: $primaryWhite;
+  display: flex;
+  padding-top: 3vw;
+  padding-bottom: 3vw;
+  justify-content: center;
+
+  .contact-card-main-container {
+    display: flex;
+    flex-direction: row;
+
+    .contact-card-left-container {
+      flex-basis: 35%;
+      width: 100%;
+      margin: 10px;
+      text-align: center;
+      padding-top: 5vw;
+      padding-bottom: 5vw;
+
+      .contact-card-left-container-text {
+        margin-top: 6vw;
+        text-align: justify;
+      }
+    }
+
+    .contact-card-right-container {
+      flex-basis: 65%;
+      width: 100%;
+      margin: 10px;
+
+      #contact-me-text {
+        text-align: center;
+      }
+
+      .contact-card-right-container-end-btn {
+        width: 100%;
+      }
+    }
+  }
+}
+
+// Media queries
+@media screen and (max-width: 970px) {
+}
+
+@media screen and (max-width: 500px) {
+  .contact-main-container {
+    .contact-card-main-container {
+      .contact-card-left-container {
+        display: none;
+      }
+    }
+  }
 }
