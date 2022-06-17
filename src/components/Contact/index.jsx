@@ -22,6 +22,7 @@ const Contact = () => {
       .then(
         (result) => {
           form.current.reset();
+          alert("Thank you for your email");
         },
         (error) => {
           alert(error.text);
