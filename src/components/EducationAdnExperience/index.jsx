@@ -4,7 +4,7 @@ import "./style.scss";
 import ContentCardComponent from "../Global/ContentCardComponent/Index";
 import TimelineComponent from "../Global/TimelineComponent";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGlobe } from "@fortawesome/free-solid-svg-icons";
+import { faGlobe, faSchool, faComputer, faBuildingColumns, faLaptopCode, faGraduationCap, faBriefcase } from "@fortawesome/free-solid-svg-icons";
 
 const EducationAdnExperience = () => {
   return (
@@ -20,7 +20,7 @@ const EducationAdnExperience = () => {
             timeline_elements_arr={[
               {
                 timeline_href: "http://krishnagarhighschool.in/",
-                time_line_icon: <FontAwesomeIcon icon={faGlobe} />,
+                time_line_icon: <FontAwesomeIcon icon={faSchool} />,
                 timeline_title: "Madhyamik (WBBSE)",
                 timeline_year: "2015",
                 timeline_description_1: "Score: 87.6%",
@@ -28,7 +28,7 @@ const EducationAdnExperience = () => {
               },
               {
                 timeline_href: "https://www.kjnnycc.org/",
-                time_line_icon: <FontAwesomeIcon icon={faGlobe} />,
+                time_line_icon: <FontAwesomeIcon icon={faComputer} />,
                 timeline_title: "Diploma in Computer Application (DCA)",
                 timeline_year: "2015",
                 timeline_description_1: "Score: 95.33%",
@@ -38,7 +38,7 @@ const EducationAdnExperience = () => {
               {
                 timeline_href:
                   "https://en.wikipedia.org/wiki/Krishnagar_Collegiate_School",
-                time_line_icon: <FontAwesomeIcon icon={faGlobe} />,
+                time_line_icon: <FontAwesomeIcon icon={faBuildingColumns} />,
                 timeline_title: "Higher Secondary (WBCHSE)",
                 timeline_year: "2017",
                 timeline_description_1: "Score: 79.4%",
@@ -46,7 +46,7 @@ const EducationAdnExperience = () => {
               },
               {
                 timeline_href: "https://www.kjnnycc.org/",
-                time_line_icon: <FontAwesomeIcon icon={faGlobe} />,
+                time_line_icon: <FontAwesomeIcon icon={faLaptopCode} />,
                 timeline_title:
                   "Diploma in Computer Application & Programming (DCA&P)",
                 timeline_year: "2018",
@@ -56,7 +56,7 @@ const EducationAdnExperience = () => {
               },
               {
                 timeline_href: "https://klyuniv.ac.in/",
-                time_line_icon: <FontAwesomeIcon icon={faGlobe} />,
+                time_line_icon: <FontAwesomeIcon icon={faGraduationCap} />,
                 timeline_title: "B.Sc. Honours (3 Year Degree) in Physics",
                 timeline_year: "2018-20",
                 timeline_description_1: "Score: 72.625%",
@@ -83,7 +83,7 @@ const EducationAdnExperience = () => {
             timeline_elements_arr={[
               {
                 timeline_href: "https://alienbrains.in/",
-                time_line_icon: <FontAwesomeIcon icon={faGlobe} />,
+                time_line_icon: <FontAwesomeIcon icon={faBriefcase} />,
                 timeline_title: "Back-end Developer",
                 timeline_year: "2021-Present",
                 timeline_description_1: "Alien Brains",
