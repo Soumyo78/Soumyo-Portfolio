@@ -1,6 +1,5 @@
 // Importing the styles
 import "./style.scss";
-
 import ContentCardComponent from "../Global/ContentCardComponent/Index";
 import TimelineComponent from "../Global/TimelineComponent";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
