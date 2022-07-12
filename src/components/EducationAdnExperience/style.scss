@@ -23,6 +23,10 @@
 
     .content-card-main-container {
       height: fit-content !important;
+
+      .card-title-text {
+        font-size: 5vw;
+      }
     }
   }
 }

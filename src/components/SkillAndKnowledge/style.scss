@@ -12,6 +12,7 @@
     font-size: 3vw;
     font-weight: bold;
     color: $primaryUIColor;
+    display: none;
   }
 
   .content-cards-container {
@@ -56,6 +57,7 @@
 @media screen and (max-width: 970px) {
   .skill-and-knowledge-main-container {
     #skill-and-knowledge-h1-text {
+      display: block;
       font-size: 8vw;
       font-weight: bold;
     }
@@ -67,6 +69,7 @@
     padding: 5px;
 
     #skill-and-knowledge-h1-text {
+      display: block;
       font-weight: bold;
       margin-bottom: 15px;
     }
