@@ -12,6 +12,7 @@
     font-size: 3vw;
     font-weight: bold;
     color: $primaryUIColor;
+    display: none;
   }
 }
 
@@ -31,6 +32,7 @@
 
     #portfolio-h1-text {
       font-weight: bold;
+      display: block;
     }
   }
 }
