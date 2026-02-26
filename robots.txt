@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://soumyo78.github.io/Soumyo-Portfolio/sitemap.xml
