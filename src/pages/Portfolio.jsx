@@ -37,7 +37,7 @@ export default function Portfolio() {
             className={`px-6 py-2 rounded-full text-sm font-semibold transition-all duration-300 ${
               activeTab === cat
                 ? "bg-blue-600 text-white shadow-md shadow-blue-500/30"
-                : "bg-white dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-700"
+                : "bg-slate-50 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-700"
             }`}
           >
             {cat.charAt(0).toUpperCase() + cat.slice(1)}

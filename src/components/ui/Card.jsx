@@ -14,7 +14,7 @@ export default function Card({ data }) {
   return (
     <motion.div
       whileHover={{ y: -8 }}
-      className="group flex flex-col bg-white dark:bg-slate-800 rounded-2xl overflow-hidden shadow-sm hover:shadow-2xl hover:shadow-blue-500/10 border border-slate-200 dark:border-slate-700 transition-all duration-300 h-full relative"
+      className="group flex flex-col bg-slate-50 dark:bg-slate-800 rounded-2xl overflow-hidden shadow-sm hover:shadow-2xl hover:shadow-blue-500/10 border border-slate-200 dark:border-slate-700 transition-all duration-300 h-full relative"
     >
       {/* Decorative gradient blur that appears on hover */}
       <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
