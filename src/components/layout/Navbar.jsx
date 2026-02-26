@@ -8,13 +8,13 @@ export default function Navbar() {
   const { theme, toggleTheme } = useTheme();
 
   return (
-    <nav className="sticky top-0 z-50 w-full backdrop-blur-md bg-white/80 dark:bg-slate-900/80 border-b border-slate-200 dark:border-slate-800 shadow-sm transition-colors duration-300">
+    <nav className="sticky top-0 z-50 w-full backdrop-blur-md bg-slate-50/80 dark:bg-slate-900/80 border-b border-slate-200 dark:border-slate-800 shadow-sm transition-colors duration-300">
       <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
         <NavLink
           to="/"
           className="text-xl font-bold text-slate-800 dark:text-white tracking-tight flex items-center gap-2 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
         >
-          <span className="bg-gradient-to-br from-blue-600 to-purple-600 text-white p-0.5 rounded-lg w-12 h-12">
+          <span className="flex-shrink-0 rounded-2xl overflow-hidden bg-slate-200 dark:bg-slate-800 border-4 border-white dark:border-slate-700 shadow-lg w-12 h-12">
             <img
               src={`${import.meta.env.BASE_URL}assets/logo-1.png`}
               alt="Soumyo Roy"

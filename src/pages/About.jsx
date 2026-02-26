@@ -15,7 +15,7 @@ export default function About() {
       <motion.section
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        className="flex flex-col md:flex-row gap-10 items-center md:items-start mb-20 bg-white dark:bg-slate-900 p-8 rounded-3xl shadow-sm border border-slate-200 dark:border-slate-800"
+        className="flex flex-col md:flex-row gap-10 items-center md:items-start mb-20 bg-slate-50 dark:bg-slate-900 p-8 rounded-3xl shadow-sm border border-slate-200 dark:border-slate-800"
       >
         <div className="w-48 h-48 flex-shrink-0 rounded-2xl overflow-hidden bg-slate-200 dark:bg-slate-800 border-4 border-white dark:border-slate-700 shadow-lg">
           {/* REPLACE THIS IMAGE PATH WITH YOUR ACTUAL PROFILE PICTURE */}
@@ -114,16 +114,24 @@ export default function About() {
                 Coding Skills
               </h2>
             </div>
-            <div className="space-y-6 bg-white dark:bg-slate-900 p-8 rounded-3xl shadow-sm border border-slate-200 dark:border-slate-800">
-              <SkillBar name="Rails" percentage={80} color="bg-red-500" />
-              <SkillBar name="Ruby" percentage={75} color="bg-red-400" />
+            <div className="space-y-6 bg-slate-50 dark:bg-slate-900 p-8 rounded-3xl shadow-sm border border-slate-200 dark:border-slate-800">
+              <SkillBar
+                name="Ruby on Rails"
+                percentage={95}
+                color="bg-red-500"
+              />
               <SkillBar
                 name="JavaScript"
                 percentage={70}
                 color="bg-yellow-400"
               />
-              <SkillBar name="React JS" percentage={60} color="bg-blue-400" />
-              <SkillBar name="CSS / SCSS" percentage={65} color="bg-pink-500" />
+              <SkillBar name="React JS" percentage={75} color="bg-blue-400" />
+              <SkillBar name="CSS / SCSS" percentage={70} color="bg-pink-500" />
+              <SkillBar
+                name="React Native"
+                percentage={65}
+                color="bg-pink-500"
+              />
             </div>
           </section>
 
@@ -134,7 +142,7 @@ export default function About() {
                 Design & Architecture
               </h2>
             </div>
-            <div className="space-y-6 bg-white dark:bg-slate-900 p-8 rounded-3xl shadow-sm border border-slate-200 dark:border-slate-800">
+            <div className="space-y-6 bg-slate-50 dark:bg-slate-900 p-8 rounded-3xl shadow-sm border border-slate-200 dark:border-slate-800">
               <SkillBar
                 name="Web Designing"
                 percentage={80}
@@ -211,7 +219,7 @@ function TimelineItem({ title, subtitle, date, description }) {
       className="relative pl-8"
     >
       {/* Timeline Dot */}
-      <div className="absolute left-[-9px] top-1.5 w-4 h-4 bg-white dark:bg-slate-900 border-4 border-blue-500 rounded-full" />
+      <div className="absolute left-[-9px] top-1.5 w-4 h-4 bg-slate-50 dark:bg-slate-900 border-4 border-blue-500 rounded-full" />
 
       <div className="mb-1 text-sm font-bold text-blue-600 dark:text-blue-400">
         {date}
