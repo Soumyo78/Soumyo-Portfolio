@@ -4,6 +4,6 @@ import tailwindcss from "@tailwindcss/vite";
 
 export default defineConfig(({ mode }) => ({
   plugins: [react(), tailwindcss()],
-  // Use root base locally, project subpath when deployed.
-  base: mode === "production" ? "/soumyo-portfolio/" : "/",
+  // Make sure the capitalization matches your GitHub repository name exactly!
+  base: mode === "production" ? "/Soumyo-Portfolio/" : "/",
 }));
