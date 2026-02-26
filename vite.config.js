@@ -2,8 +2,8 @@ import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import tailwindcss from "@tailwindcss/vite";
 
-export default defineConfig({
+export default defineConfig(({ mode }) => ({
   plugins: [react(), tailwindcss()],
-  // This ensures assets load correctly on your live URL
-  base: "/soumyo-portfolio/",
-});
+  // Use root base locally, project subpath when deployed.
+  base: mode === "production" ? "/soumyo-portfolio/" : "/",
+}));

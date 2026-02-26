@@ -11,7 +11,7 @@ export default function Apps() {
         animate={{ opacity: 1, y: 0 }}
         className="mb-12 text-center md:text-left"
       >
-        <h1 className="text-4xl font-extrabold text-slate-900 mb-4">
+        <h1 className="text-4xl font-extrabold text-slate-400 mb-4">
           Google Play Showcase
         </h1>
         <p className="text-lg text-slate-600 max-w-2xl">

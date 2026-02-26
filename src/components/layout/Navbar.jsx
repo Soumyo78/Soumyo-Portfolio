@@ -14,14 +14,18 @@ export default function Navbar() {
           to="/"
           className="text-xl font-bold text-slate-800 dark:text-white tracking-tight flex items-center gap-2 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
         >
-          <span className="bg-gradient-to-br from-blue-600 to-purple-600 text-white p-1.5 rounded-lg">
-            SR
+          <span className="bg-gradient-to-br from-blue-600 to-purple-600 text-white p-0.5 rounded-lg w-12 h-12">
+            <img
+              src={`${import.meta.env.BASE_URL}assets/logo-1.png`}
+              alt="Soumyo Roy"
+              className="w-full h-full object-cover"
+            />
           </span>
           Soumyo Roy
         </NavLink>
 
         <div className="flex items-center gap-4 sm:gap-6">
-          <NavItem to="/" icon={<User size={18} />} label="About" />
+          <NavItem to="/about" icon={<User size={18} />} label="About" />
           <NavItem
             to="/apps"
             icon={<Smartphone size={18} />}

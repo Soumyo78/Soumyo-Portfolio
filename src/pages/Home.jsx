@@ -1,4 +1,3 @@
-// src/pages/Home.jsx
 import React from "react";
 import { motion } from "framer-motion";
 import {
@@ -21,9 +20,8 @@ export default function Home() {
         className="max-w-4xl w-full pt-20 pb-16 text-center"
       >
         <div className="w-32 h-32 mx-auto bg-slate-200 rounded-full mb-8 overflow-hidden border-4 border-white shadow-lg">
-          {/* Replace this src with your actual professional photo from your assets */}
           <img
-            src="https://api.dicebear.com/7.x/avataaars/svg?seed=Soumyo"
+            src={`${import.meta.env.BASE_URL}assets/my-img-2.jpeg`}
             alt="Soumyo Roy"
             className="w-full h-full object-cover"
           />
