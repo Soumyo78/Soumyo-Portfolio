@@ -162,7 +162,7 @@ export const portfolioData = {
       title: "Online Drawing Application",
       description:
         "A digital canvas application utilizing React and HTML5 Canvas.",
-      image: `${import.meta.env.BASE_URL}assets/online-drawing-pic-1.jpg`,
+      image: `${import.meta.env.BASE_URL}assets/online-drwaing-pic-1.jpg`,
       tags: ["React", "Canvas"],
       links: [],
     },

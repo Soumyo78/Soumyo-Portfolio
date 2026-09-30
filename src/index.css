@@ -1,8 +1,298 @@
 @import "tailwindcss";
 
-/* This tells Tailwind to use class-based dark mode instead of system preferences */
+/* Class-based dark mode (the `dark` class is set on <html> by useTheme / the inline script in index.html) */
 @custom-variant dark (&:where(.dark, .dark *));
 
+/* ------------------------------------------------------------------
+   Design tokens
+   Static tokens live in @theme. Theme-aware colors are declared as raw
+   CSS variables on :root / .dark and exposed to Tailwind via @theme inline,
+   so utilities like bg-surface, text-muted, border-line switch with the theme.
+------------------------------------------------------------------- */
 @theme {
   --color-primary: #2563eb;
+
+  --font-sans: "Geist", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-display: "Bricolage Grotesque", "Geist", ui-sans-serif, system-ui, sans-serif;
+
+  /* Fluid type scale */
+  --text-display: clamp(2.75rem, 1.6rem + 5vw, 5.25rem);
+  --text-display--line-height: 1.02;
+  --text-title: clamp(2.25rem, 1.5rem + 3vw, 3.75rem);
+  --text-title--line-height: 1.08;
+  --text-lead: clamp(1.125rem, 1rem + 0.6vw, 1.5rem);
+  --text-lead--line-height: 1.6;
+
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+
+  --animate-aurora-1: aurora-1 26s ease-in-out infinite alternate;
+  --animate-aurora-2: aurora-2 32s ease-in-out infinite alternate;
+  --animate-aurora-3: aurora-3 38s ease-in-out infinite alternate;
+  --animate-spin-slow: spin 8s linear infinite;
+  --animate-marquee: marquee 40s linear infinite;
+  --animate-gradient-pan: gradient-pan 6s ease-in-out infinite alternate;
+  --animate-placeholder: gradient-pan 5s ease-in-out infinite alternate;
+
+  @keyframes aurora-1 {
+    0% { transform: translate3d(0, 0, 0) scale(1); }
+    100% { transform: translate3d(12vw, 8vh, 0) scale(1.15); }
+  }
+  @keyframes aurora-2 {
+    0% { transform: translate3d(0, 0, 0) scale(1.1); }
+    100% { transform: translate3d(-14vw, 10vh, 0) scale(0.9); }
+  }
+  @keyframes aurora-3 {
+    0% { transform: translate3d(0, 0, 0) scale(0.95); }
+    100% { transform: translate3d(8vw, -12vh, 0) scale(1.2); }
+  }
+  @keyframes marquee {
+    from { transform: translate3d(0, 0, 0); }
+    to { transform: translate3d(-50%, 0, 0); }
+  }
+  @keyframes gradient-pan {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
+  }
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-bg-elevated: var(--bg-elevated);
+  --color-surface: var(--surface);
+  --color-surface-strong: var(--surface-strong);
+  --color-line: var(--line);
+  --color-line-strong: var(--line-strong);
+  --color-fg: var(--fg);
+  --color-muted: var(--muted);
+  --color-subtle: var(--subtle);
+  --color-accent: var(--accent);
+  --color-accent-2: var(--accent-2);
+  --color-glow: var(--glow);
+}
+
+/* Light theme */
+:root {
+  color-scheme: light;
+  --bg: #f5f7fb;
+  --bg-elevated: #ffffff;
+  --surface: rgb(255 255 255 / 0.72);
+  --surface-strong: rgb(255 255 255 / 0.9);
+  --line: rgb(15 23 42 / 0.09);
+  --line-strong: rgb(15 23 42 / 0.16);
+  --fg: #0b1220;
+  --muted: #475569;
+  --subtle: #64748b;
+  --accent: #2563eb;      /* blue-600 */
+  --accent-2: #7c3aed;    /* violet-600 */
+  --glow: rgb(37 99 235 / 0.18);
+  --aurora-a: rgb(96 165 250 / 0.35);
+  --aurora-b: rgb(167 139 250 / 0.3);
+  --aurora-c: rgb(56 189 248 / 0.22);
+  --grid-color: rgb(15 23 42 / 0.07);
+  --grain-opacity: 0.035;
+  --gradient-accent: linear-gradient(110deg, #2563eb 0%, #7c3aed 50%, #2563eb 100%);
+}
+
+/* Dark theme (the hero experience) */
+.dark {
+  color-scheme: dark;
+  --bg: #05070d;
+  --bg-elevated: #0b0f1a;
+  --surface: rgb(17 22 36 / 0.6);
+  --surface-strong: rgb(20 26 42 / 0.85);
+  --line: rgb(148 163 184 / 0.12);
+  --line-strong: rgb(148 163 184 / 0.22);
+  --fg: #eef2f8;
+  --muted: #a3afc2;
+  --subtle: #7d8aa0;
+  --accent: #60a5fa;      /* blue-400 */
+  --accent-2: #a78bfa;    /* violet-400 */
+  --glow: rgb(96 165 250 / 0.22);
+  --aurora-a: rgb(37 99 235 / 0.28);
+  --aurora-b: rgb(124 58 237 / 0.24);
+  --aurora-c: rgb(14 165 233 / 0.14);
+  --grid-color: rgb(148 163 184 / 0.08);
+  --grain-opacity: 0.06;
+  --gradient-accent: linear-gradient(110deg, #60a5fa 0%, #a78bfa 50%, #60a5fa 100%);
+}
+
+/* ------------------------------------------------------------------
+   Base
+------------------------------------------------------------------- */
+@layer base {
+  html {
+    background-color: var(--bg);
+    -webkit-tap-highlight-color: transparent;
+  }
+  /* No body background: it would paint over the fixed -z-10 backdrop.
+     The html element's background fills the canvas instead. */
+  body {
+    color: var(--fg);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+  h1, h2, h3, .font-display {
+    font-family: var(--font-display);
+    letter-spacing: -0.025em;
+  }
+  ::selection {
+    background: color-mix(in srgb, var(--accent) 30%, transparent);
+  }
+  /* Consistent, visible keyboard focus */
+  :focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+    border-radius: 8px;
+  }
+}
+
+/* ------------------------------------------------------------------
+   Custom utilities
+------------------------------------------------------------------- */
+
+/* Animated accent gradient text */
+@utility text-gradient {
+  background-image: var(--gradient-accent);
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: var(--animate-gradient-pan);
+}
+
+/* Restrained glass surface */
+@utility glass {
+  background-color: var(--surface);
+  backdrop-filter: blur(16px) saturate(140%);
+  -webkit-backdrop-filter: blur(16px) saturate(140%);
+}
+
+/* 1px gradient border drawn with a masked pseudo element.
+   The element needs `position: relative`. */
+@utility gradient-border {
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 1px;
+    background: linear-gradient(
+      140deg,
+      color-mix(in srgb, var(--accent) 55%, transparent),
+      var(--line) 35%,
+      var(--line) 65%,
+      color-mix(in srgb, var(--accent-2) 55%, transparent)
+    );
+    -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+  }
+}
+
+/* Faded dot grid used by the global background */
+@utility bg-grid {
+  background-image:
+    linear-gradient(var(--grid-color) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-color) 1px, transparent 1px);
+  background-size: 56px 56px;
+  mask-image: radial-gradient(ellipse 80% 60% at 50% 0%, #000 30%, transparent 75%);
+  -webkit-mask-image: radial-gradient(ellipse 80% 60% at 50% 0%, #000 30%, transparent 75%);
+}
+
+/* Film grain (inline SVG noise) */
+@utility grain {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  opacity: var(--grain-opacity);
+  mix-blend-mode: overlay;
+}
+
+/* Horizontal edge fade used by the logo marquee */
+@utility mask-fade-x {
+  mask-image: linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent);
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent);
+}
+
+/* ------------------------------------------------------------------
+   Components that need pseudo elements / CSS variables
+------------------------------------------------------------------- */
+
+/* Mouse-following spotlight (see SpotlightCard.jsx).
+   --mx / --my are written from JS without React re-renders. */
+.spotlight {
+  --mx: 50%;
+  --my: 50%;
+  --spot: 0;
+}
+.spotlight::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: radial-gradient(
+    420px circle at var(--mx) var(--my),
+    color-mix(in srgb, var(--accent) 85%, transparent),
+    color-mix(in srgb, var(--accent-2) 50%, transparent) 30%,
+    transparent 60%
+  );
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: var(--spot);
+  transition: opacity 0.35s ease;
+  pointer-events: none;
+  z-index: 3;
+}
+.spotlight-fill {
+  background: radial-gradient(
+    500px circle at var(--mx) var(--my),
+    var(--glow),
+    transparent 45%
+  );
+  opacity: var(--spot);
+  transition: opacity 0.35s ease;
+}
+
+/* Shine sweep for buttons */
+.shine {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+.shine::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(110deg, transparent 30%, rgb(255 255 255 / 0.35) 50%, transparent 70%);
+  transform: translateX(-120%);
+  pointer-events: none;
+}
+.shine:hover::after,
+.shine:focus-visible::after {
+  transition: transform 0.75s var(--ease-out-expo);
+  transform: translateX(120%);
+}
+
+/* Theme toggle circular reveal (View Transitions API) */
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation: none;
+  mix-blend-mode: normal;
+}
+
+/* ------------------------------------------------------------------
+   Reduced motion: stop every decorative CSS animation
+------------------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
 }
