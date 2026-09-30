@@ -6,6 +6,21 @@
   <link rel="icon" type="image/png" href="/assets/logo-1.png" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+  <!-- Apply the saved theme before first paint (default: dark) to avoid a light flash -->
+  <script>
+    (function () {
+      var theme = "dark";
+      try { theme = localStorage.getItem("theme") || "dark"; } catch (e) {}
+      if (theme === "dark") document.documentElement.classList.add("dark");
+    })();
+  </script>
+
+  <!-- Fonts: Bricolage Grotesque (display) + Geist (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Geist:wght@300..700&display=swap">
+
   <title>Soumyo Roy | Back-End Developer & App Creator</title>
   <meta name="title" content="Soumyo Roy | Back-End Developer & App Creator">
   <meta name="description"
@@ -27,6 +42,61 @@
     content="Explore the portfolio, projects, and Android apps created by Soumyo Roy.">
   <meta property="twitter:image" content="https://soumyo78.github.io/Soumyo-Portfolio/assets/my-img-2.jpeg">
   <meta name="google-site-verification" content="ByGH44xs3fm-UKNpBJSYiJ0zukkMYVh4zFdFvmneBbA" />
+
+  <!-- Additional SEO / social tags (existing tags above are unchanged) -->
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="googlebot" content="index, follow">
+  <meta name="application-name" content="Soumyo Roy">
+  <meta name="apple-mobile-web-app-title" content="Soumyo Roy">
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#05070d">
+  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#f5f7fb">
+  <meta name="color-scheme" content="dark light">
+  <meta name="format-detection" content="telephone=no">
+  <link rel="apple-touch-icon" href="/assets/logo-1.png">
+  <link rel="sitemap" type="application/xml" href="/sitemap.xml">
+  <meta property="og:site_name" content="Soumyo Roy">
+  <meta property="og:locale" content="en_IN">
+  <meta property="og:image:alt" content="Soumyo Roy">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:width" content="896">
+  <meta property="og:image:height" content="1200">
+  <meta name="twitter:image:alt" content="Soumyo Roy">
+
+  <!-- Structured data (schema.org) built only from content already on the site -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://soumyo78.github.io/Soumyo-Portfolio/#website",
+        "url": "https://soumyo78.github.io/Soumyo-Portfolio/",
+        "name": "Soumyo Roy",
+        "description": "Official portfolio of Soumyo Roy, a Back-End Developer and App Creator specializing in scalable architecture, Ruby on Rails, React, and Android applications.",
+        "inLanguage": "en",
+        "publisher": { "@id": "https://soumyo78.github.io/Soumyo-Portfolio/#person" }
+      },
+      {
+        "@type": "Person",
+        "@id": "https://soumyo78.github.io/Soumyo-Portfolio/#person",
+        "name": "Soumyo Roy",
+        "url": "https://soumyo78.github.io/Soumyo-Portfolio/",
+        "image": "https://soumyo78.github.io/Soumyo-Portfolio/assets/my-img-2.jpeg",
+        "jobTitle": "Back-End Developer",
+        "description": "Back-End Developer & App Creator. Specializing in scalable architecture and crafting high-quality Android apps for Google Play.",
+        "email": "mailto:dev.soumyo.roy@gmail.com",
+        "worksFor": { "@type": "Organization", "name": "Alien Brains" },
+        "alumniOf": [
+          { "@type": "CollegeOrUniversity", "name": "University of Kalyani" },
+          { "@type": "School", "name": "Krishnanagar Collegiate School" }
+        ],
+        "address": { "@type": "PostalAddress", "addressRegion": "West Bengal", "addressCountry": "IN" },
+        "knowsAbout": ["Ruby on Rails", "JavaScript", "React JS", "React Native", "CSS / SCSS", "PostgreSQL", "REST APIs", "Database Designing", "Web Designing", "Android"],
+        "sameAs": ["https://github.com/soumyo78", "https://www.linkedin.com/in/soumyo-roy-712662176/"]
+      }
+    ]
+  }
+  </script>
 </head>
 
 <body>
